@@ -93,7 +93,6 @@ defmodule Mix.Tasks.Compile.Apidoc do
 
   defp get_apidoc_bin(config) do
     phx_ver_req = Application.spec(:phoenix, :vsn) |> to_string
-    phx_ver_req = Mix.Project.config[:deps][:phoenix]
     cond do
       config[:apidoc_bin] != nil ->
         config[:apidoc_bin]
